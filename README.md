@@ -211,8 +211,8 @@ Classification Report: The detailed classification report is as follows:
 ---
 
 # Future Work
-Potential enhancements for this project include:
 
-**Hyperparameter Tuning**: Experiment with different optimizers and learning rates for further performance improvements.
-**Model Extensions**: Test advanced transformer-based models like CLIP ViT-L for richer feature extraction.
-**Additional Data**: Expand the dataset with more diverse images to improve model generalization.
+Potential enhancements for this project include:
+- **Hyperparameter Tuning**: Experiment with different optimizers and learning rates for further performance improvements.
+- **Model Extensions**: Test advanced transformer-based models like CLIP ViT-L for richer feature extraction.
+- **Additional Data**: Expand the dataset with more diverse images to improve model generalization.

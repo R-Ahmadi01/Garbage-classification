@@ -116,5 +116,5 @@ Hyperparameter Tuning: Experiment with different optimizers and learning rates f
 Model Extensions: Test advanced transformer-based models like CLIP ViT-L for richer feature extraction.
 Additional Data: Expand the dataset with more diverse images to improve model generalization.
 
-### 7.References
+### References
 

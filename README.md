@@ -122,8 +122,7 @@ The training process is configured with the following hyperparameters to optimiz
  <img src="https://github.com/user-attachments/assets/e25fa132-8f6a-4606-a409-2a06330b93e1" alt="Model" width="720"/>
 </p>
 <p align="center">
- *Figure 2. Model Architecture: Fusion of CLIP embeddings and custom classifier network.*
- *Figure 2: Model Architecture - Fusion of CLIP Embeddings and Custom Classifier Network.*
+  <em>Figure 2. Model Architecture: Fusion of CLIP embeddings and custom classifier network.</em>
 </p>
 
 

@@ -4,13 +4,14 @@ This repository provides a comprehensive pipeline for classifying garbage images
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Architecture](#Architecture)
-3. [Dataset](#Dataset)
-4. [Installation](#Installation)
-5. [Usage](#Usage)
-6. [Results](#Results)
-7. [Future Work](#Future-Work)
-8. [References](#References)
+2. [Dataset](#dataset)
+3. [Data Preprocessing](#data-preprocessing)
+4. [Architecture](#Architecture)
+6. [Installation](#Installation)
+7. [Usage](#Usage)
+8. [Results](#Results)
+9. [Future Work](#Future-Work)
+10. [References](#References)
 
 ---
 
@@ -24,9 +25,53 @@ In Canada, particularly in Calgary, waste sorting is a critical part of waste ma
 
 In this project, we utilize OpenAI's CLIP model, which integrates both vision and language models, to extract rich semantic features from images and their corresponding textual descriptions. By fine-tuning a small portion of the CLIP model and training a custom classifier, we achieve a highly accurate fusion-based classification model for garbage categorization.
 
+-------
+
+# Dataset
+
+The dataset includes images classified into four groups: `Blue`, `TTR`, `Green`, and `Black`. Each image filename serves as its text description for simplicity.
+
+- **Data Augmentation**: Applied random cropping, flipping, color jitter, and normalization to improve model robustness.
+- **Train, Validation, and Test Splits**: The dataset is divided into training, validation, and testing folders for a structured evaluation of model performance.
+
+| Dataset Split | Number of Images |
+|---------------|------------------|
+| Train         | _10200_          |
+| Validation    | _1800_           |
+| Test          | _3431_           |
+
+*Table 1. Dataset Distribution.*
+
+---
+# Data Preprocessing
+Effective preprocessing is crucial for improving model performance and ensuring consistency across training, validation, and test data. In this project, we use specific data transformations for training and evaluation phases.
+
+**Training Data Augmentation**
+To make the model more robust, several data augmentation techniques are applied to the training images:
+-**Random Resized Crop**: Randomly crops the image to a size of 224x224 pixels. This transformation helps the model generalize better by introducing variations in scale.
+Random Horizontal and Vertical Flip: Randomly flips the image horizontally and vertically with a 50% probability, making the model invariant to orientation changes.
+-**Color Jitter**: Adjusts brightness, contrast, saturation, and hue with small variations, making the model less sensitive to lighting conditions.
+-**Normalization**: Applies mean and standard deviation normalization, which centers pixel values and brings them into a standard range that matches the model’s expected input format. The values used are:
+    -Mean: [0.48145466, 0.4578275, 0.40821073]
+    -Standard Deviation: [0.26862954, 0.26130258, 0.27577711]
+**Validation and Test Data Transformations**
+For validation and testing, we apply minimal transformations to keep the input consistent and avoid altering the data distribution:
+
+-**Resize and Center Crop**: Resizes the image to 224 pixels and then crops it from the center to ensure a fixed input size.
+-**Normalization**: The same mean and standard deviation normalization as applied in training.
+
+**Text Preprocessing**
+Each image is associated with a textual description derived from the filename:
+
+-**Filename Parsing**: The filename (without extension) is used as the text description.
+-**Tokenization**: Text descriptions are tokenized using CLIP’s tokenizer to convert them into embeddings compatible with the model.
+
+
+This preprocessing pipeline ensures that both image and text data are formatted consistently, allowing for effective fusion of features in the model.
 
 
 ---
+
 # Architecture
 
 The model architecture in this project consists of two main components: the CLIP feature extractor and a custom classifier figure 2. 
@@ -72,22 +117,6 @@ The training process is configured with the following hyperparameters to optimiz
 <img src="https://github.com/user-attachments/assets/e25fa132-8f6a-4606-a409-2a06330b93e1" alt="Model" width="720"/>
 
 *Figure 2. Model Architecture: Fusion of CLIP embeddings and custom classifier network.*
-
----
-
-# Dataset
-The dataset includes images classified into four groups: `Blue`, `TTR`, `Green`, and `Black`. Each image filename serves as its text description for simplicity.
-
-- **Data Augmentation**: Applied random cropping, flipping, color jitter, and normalization to improve model robustness.
-- **Train, Validation, and Test Splits**: The dataset is divided into training, validation, and testing folders for a structured evaluation of model performance.
-
-| Dataset Split | Number of Images |
-|---------------|------------------|
-| Train         | _10200_          |
-| Validation    | _1800_           |
-| Test          | _3431_           |
-
-*Table 1. Dataset Distribution.*
 
 ---
 

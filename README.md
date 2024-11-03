@@ -186,7 +186,10 @@ This table provides an overview of the model's training and validation accuracy 
 *Table 2 Training and validation accuracy across epochs.*
 | Epoch |   Training Loss   |  Validation Loss   |
 |-------|-------------------|--------------------|
-| 1st   |      0.5095       |      0.3256        |                      
+| 1st   |      0.5095       |      0.3256        |   
+| 2nd   |      0.3204       |      0.2942        |   
+| 3rd   |      0.2557       |      0.2595        |   
+| 5th   |      0.2015       |      0.2536        |   
 | Final |      0.1917       |      0.2464        |
 
 

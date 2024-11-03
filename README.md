@@ -11,7 +11,6 @@ This repository provides a comprehensive pipeline for classifying garbage images
 7. [Usage](#Usage)
 8. [Results](#Results)
 9. [Future Work](#Future-Work)
-10. [References](#References)
 
 ---
 
@@ -217,9 +216,3 @@ Potential enhancements for this project include:
 **Hyperparameter Tuning**: Experiment with different optimizers and learning rates for further performance improvements.
 **Model Extensions**: Test advanced transformer-based models like CLIP ViT-L for richer feature extraction.
 **Additional Data**: Expand the dataset with more diverse images to improve model generalization.
-
-
----
-
-# References
-

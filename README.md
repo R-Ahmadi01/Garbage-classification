@@ -18,7 +18,9 @@ This repository provides a comprehensive pipeline for classifying garbage images
  # Introduction
 In Canada, particularly in Calgary, waste sorting is a critical part of waste management efforts. The system relies on different color-coded carts for specific types of waste. The black cart is intended for general garbage, the blue cart is for recyclables, and the green cart is for compostable materials such as food waste, soiled cardboard, and other compostable items. Additionally, certain disposables are color-coded red to indicate special handling. Figure 1 provides a more detailed guide on how to properly sort waste under this system.
 
-<img src="https://github.com/user-attachments/assets/6a56224d-710e-4634-a3c8-4670dc3d0a58" alt="Picture1" width="360"/>
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/6a56224d-710e-4634-a3c8-4670dc3d0a58" alt="Picture1" width="360"/>
+</p>
 
 * Figure 1. This guide illustrates Calgary's waste sorting system, including the proper disposal of garbage, recyclables, compostable materials, and other categorized items based on color-coded carts.*
 

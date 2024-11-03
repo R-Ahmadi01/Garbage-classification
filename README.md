@@ -40,9 +40,9 @@ The dataset includes images classified into four groups: `Blue`, `TTR`, `Green`,
 
 | Dataset Split | Number of Images |
 |---------------|------------------|
-| Train         |_____10200_       |
-| Validation    |_____1800_        |
-| Test          |_____3431_        |
+| Train         |     10200        |
+| Validation    |     1800         |
+| Test          |     3431         |
 
 *Table 1. Dataset Distribution.*
 

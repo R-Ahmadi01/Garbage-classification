@@ -31,34 +31,30 @@ The model architecture consists of two main components:
 *Figure 1. Model Architecture: Fusion of CLIP embeddings and custom classifier network.*
 
 # Dataset
-The dataset includes images classified into four groups: 'Blue', 'TTR', 'Green', and 'Black'. Each image filename serves as its text description for simplicity.
+The dataset includes images classified into four groups: `Blue`, `TTR`, `Green`, and `Black`. Each image filename serves as its text description for simplicity.
 
 - **Data Augmentation**: Applied random cropping, flipping, color jitter, and normalization to improve model robustness.
 - **Train, Validation, and Test Splits**: The dataset is divided into training, validation, and testing folders for a structured evaluation of model performance.
 
-Dataset Split	Number of Images
-Train	X
-Validation	Y
-Test	Z
-Table 1. Dataset Distribution.
+| Dataset Split | Number of Images |
+|---------------|------------------|
+| Train         | _X_             |
+| Validation    | _Y_             |
+| Test          | _Z_             |
+
+*Table 1. Dataset Distribution.*
 
 # Installation
-Clone the Repository:
-
-bash
-Copy code
-git clone https://github.com/your-username/garbage-classification-clip.git
-cd garbage-classification-clip
-Install Required Libraries: Ensure torch, torchvision, clip, numpy, PIL, matplotlib, and seaborn are installed.
-
-bash
-Copy code
-pip install -r requirements.txt
-Set Up Data Directory:
-
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/garbage-classification-clip.git
+   cd garbage-classification-clip
+2. **Install Required Libraries**: Ensure `torch`, `torchvision`, `clip`, `numpy`, `PIL`, `matplotlib`, and `seaborn` are installed.
+   ```bash
+   pip install -r requirements.txt
+3.**Set Up Data Directory**:
 Place your dataset in the following structure:
-mathematica
-Copy code
+
 garbage_data/
 ├── CVPR_2024_dataset_Train/
 │   ├── Blue/
@@ -77,24 +73,30 @@ garbage_data/
     └── Black/
 
 # Usage
-1. Train the Model: Run the training script with the following command:
-python train.py
-The training process will automatically save the best model as best_model.pth and print loss and accuracy metrics for each epoch.
+1. **Train the Model**: Run the training script with the following command:
+   ```bash
+   python train.py
 
-2. Test the Model: Once training is complete, evaluate the model on the test dataset:
-python test.py
+The training process will automatically save the best model as `best_model.pth` and print loss and accuracy metrics for each epoch.
 
-3.Visualize Results: Use the provided script to generate a confusion matrix and classification report. Example: 
-python evaluate.py
+2. **Test the Model**: Once training is complete, evaluate the model on the test dataset:
+      ```bash
+      python test.py
 
-4.Configuration: Adjust parameters, such as batch size, learning rates, and paths, directly in the scripts for optimal results.
+3.**Visualize Results**: Use the provided script to generate a confusion matrix and classification report. 
+Example: 
+      ```bash
+      python evaluate.py
+
+4.**Configuration**: Adjust parameters, such as batch size, learning rates, and paths, directly in the scripts for optimal results.
 
 # Results
-Training and Validation Performance
+**Training and Validation Performance**
 Metric	Training Accuracy	Validation Accuracy
-Initial	68.0%	65.5%
-After Epoch 10	89.3%	86.7%
-Final	92.5%	90.2%
+| Epoch |   Training Loss   |  Validation Loss   |
+|-------|-------------------|--------------------|
+| 1st   |      0.5095       |      0.3256        |                      
+| Final |      0.1917       |      0.2464        |
 Table 2. Training and validation accuracy across epochs.
 
 Test Performance
@@ -104,17 +106,20 @@ The model achieved an overall test accuracy of XX%. Below is a confusion matrix 
 Figure 2. Confusion Matrix on Test Data.
 
 Classification Report: The detailed classification report is as follows:
-Class	Precision	Recall	F1-Score
-Blue	0.92	0.88	0.90
-TTR	0.90	0.93	0.91
-Green	0.88	0.89	0.88
-Black	0.91	0.91	0.91
+
+| Class | Precision |
+|---------------|------------------|
+| Train         | _X_             |
+| Validation    | _Y_             |
+| Test          | _Z_             |
+
+
 # Future Work
 Potential enhancements for this project include:
 
-Hyperparameter Tuning: Experiment with different optimizers and learning rates for further performance improvements.
-Model Extensions: Test advanced transformer-based models like CLIP ViT-L for richer feature extraction.
-Additional Data: Expand the dataset with more diverse images to improve model generalization.
+**Hyperparameter Tuning**: Experiment with different optimizers and learning rates for further performance improvements.
+**Model Extensions**: Test advanced transformer-based models like CLIP ViT-L for richer feature extraction.
+**Additional Data**: Expand the dataset with more diverse images to improve model generalization.
 
 # References
 

@@ -14,7 +14,7 @@ This repository provides a comprehensive pipeline for classifying garbage images
 
 
 
- # 1. Introduction
+ ### 1. Introduction
 In this project, we utilize OpenAI's CLIP model, which integrates both vision and language models, to extract rich semantic features from images and their corresponding textual descriptions. By fine-tuning a small portion of the CLIP model and training a custom classifier, we achieve a highly accurate fusion-based classification model for garbage categorization.
 
 
@@ -116,5 +116,5 @@ Hyperparameter Tuning: Experiment with different optimizers and learning rates f
 Model Extensions: Test advanced transformer-based models like CLIP ViT-L for richer feature extraction.
 Additional Data: Expand the dataset with more diverse images to improve model generalization.
 
-# 7.References
+### 7.References
 

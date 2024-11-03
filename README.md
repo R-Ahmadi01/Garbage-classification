@@ -53,23 +53,23 @@ Effective preprocessing is crucial for improving model performance and ensuring 
 
 **Training Data Augmentation**
 To make the model more robust, several data augmentation techniques are applied to the training images:
--**Random Resized Crop**: Randomly crops the image to a size of 224x224 pixels. This transformation helps the model generalize better by introducing variations in scale.
+- **Random Resized Crop**: Randomly crops the image to a size of 224x224 pixels. This transformation helps the model generalize better by introducing variations in scale.
 Random Horizontal and Vertical Flip: Randomly flips the image horizontally and vertically with a 50% probability, making the model invariant to orientation changes.
--**Color Jitter**: Adjusts brightness, contrast, saturation, and hue with small variations, making the model less sensitive to lighting conditions.
--**Normalization**: Applies mean and standard deviation normalization, which centers pixel values and brings them into a standard range that matches the model’s expected input format. The values used are:
+- **Color Jitter**: Adjusts brightness, contrast, saturation, and hue with small variations, making the model less sensitive to lighting conditions.
+- **Normalization**: Applies mean and standard deviation normalization, which centers pixel values and brings them into a standard range that matches the model’s expected input format. The values used are:
     -Mean: [0.48145466, 0.4578275, 0.40821073]
     -Standard Deviation: [0.26862954, 0.26130258, 0.27577711]
 **Validation and Test Data Transformations**
 For validation and testing, we apply minimal transformations to keep the input consistent and avoid altering the data distribution:
 
--**Resize and Center Crop**: Resizes the image to 224 pixels and then crops it from the center to ensure a fixed input size.
--**Normalization**: The same mean and standard deviation normalization as applied in training.
+- **Resize and Center Crop**: Resizes the image to 224 pixels and then crops it from the center to ensure a fixed input size.
+- **Normalization**: The same mean and standard deviation normalization as applied in training.
 
 **Text Preprocessing**
 Each image is associated with a textual description derived from the filename:
 
--**Filename Parsing**: The filename (without extension) is used as the text description.
--**Tokenization**: Text descriptions are tokenized using CLIP’s tokenizer to convert them into embeddings compatible with the model.
+- **Filename Parsing**: The filename (without extension) is used as the text description.
+- **Tokenization**: Text descriptions are tokenized using CLIP’s tokenizer to convert them into embeddings compatible with the model.
 
 
 This preprocessing pipeline ensures that both image and text data are formatted consistently, allowing for effective fusion of features in the model.

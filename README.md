@@ -10,7 +10,8 @@ This repository provides a comprehensive pipeline for classifying garbage images
 5. Usage
 6. Results
 7. Future Work
-8. References
+8. [References](#References)
+
 
 
  # 1. Introduction

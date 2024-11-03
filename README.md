@@ -28,6 +28,7 @@ The model architecture consists of two main components:
 2. Custom Classifier: A fully connected neural network that takes concatenated image and text embeddings as input and classifies them into the four target categories.
 
 <img src="https://github.com/user-attachments/assets/e25fa132-8f6a-4606-a409-2a06330b93e1" alt="Model" width="720"/>
+
 *Figure 1. Model Architecture: Fusion of CLIP embeddings and custom classifier network.*
 
 # Dataset

@@ -195,8 +195,9 @@ The model achieved an overall test accuracy of 85%. Below is a confusion matrix 
  <img src="https://github.com/user-attachments/assets/88be91ab-3650-4edb-81ce-cb4f3fba9664" alt="Screenshot 2024-11-02 215055" width="720"/>
 </p>
 
-
-*Figure 3. Confusion Matrix on Test Data.*
+<p align="center">
+ *Figure 3. Confusion Matrix on Test Data.*
+</p>
 
 Classification Report: The detailed classification report is as follows:
 

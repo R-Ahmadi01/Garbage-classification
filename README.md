@@ -38,9 +38,9 @@ The dataset includes images classified into four groups: `Blue`, `TTR`, `Green`,
 
 | Dataset Split | Number of Images |
 |---------------|------------------|
-| Train         | _X_             |
-| Validation    | _Y_             |
-| Test          | _Z_             |
+| Train         | _10200_          |
+| Validation    | _1800_           |
+| Test          | _3431_           |
 
 *Table 1. Dataset Distribution.*
 
@@ -97,7 +97,7 @@ Metric	Training Accuracy	Validation Accuracy
 |-------|-------------------|--------------------|
 | 1st   |      0.5095       |      0.3256        |                      
 | Final |      0.1917       |      0.2464        |
-Table 2. Training and validation accuracy across epochs.
+*Table 2. Training and validation accuracy across epochs.*
 
 Test Performance
 The model achieved an overall test accuracy of XX%. Below is a confusion matrix that provides insights into class-level performance.

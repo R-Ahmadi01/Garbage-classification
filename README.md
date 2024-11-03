@@ -42,10 +42,10 @@ The model architecture in this project consists of two main components: the CLIP
 - **Layer Structure**:
    - **Input Layer**: Takes the concatenated 1024-dimensional vector (512 from image + 512 from text).
    - **Hidden Layers**: 
-        - ** Layer 1: Fully connected, 1024 units, ReLU activation, Dropout (0.5)
-        - ** Layer 2: Fully connected, 512 units, ReLU activation, Dropout (0.5)
-        - ** Layer 3: Fully connected, 128 units, ReLU activation
-        - ** Output Layer: Fully connected layer with 4 units (one per class).
+        - **Layer 1**: Fully connected, 1024 units, ReLU activation, Dropout (0.5)
+        - **Layer 2**: Fully connected, 512 units, ReLU activation, Dropout (0.5)
+        - **Layer 3**: Fully connected, 128 units, ReLU activation
+        - **Output Layer**: Fully connected layer with 4 units (one per class).
 
 **Dropout Regularization**: A dropout rate of 0.5 is applied in the hidden layers to reduce overfitting.
 

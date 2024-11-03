@@ -123,6 +123,7 @@ The training process is configured with the following hyperparameters to optimiz
 </p>
 <p align="center">
  *Figure 2. Model Architecture: Fusion of CLIP embeddings and custom classifier network.*
+ *Figure 2: Model Architecture - Fusion of CLIP Embeddings and Custom Classifier Network.*
 </p>
 
 

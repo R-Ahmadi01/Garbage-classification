@@ -15,7 +15,7 @@ This repository provides a comprehensive pipeline for classifying garbage images
 ---
 
  # Introduction
-In Canada, particularly in Calgary, waste sorting is a critical part of waste management efforts. The system relies on different color-coded carts for specific types of waste. The black cart is intended for general garbage, the blue cart is for recyclables, and the green cart is for compostable materials such as food waste, soiled cardboard, and other compostable items. Additionally, certain disposables are color-coded red to indicate special handling. ([Figure 1](Figure-1)) provides a more detailed guide on how to properly sort waste under this system.
+In Canada, particularly in Calgary, waste sorting is a critical part of waste management efforts. The system relies on different color-coded carts for specific types of waste. The black cart is intended for general garbage, the blue cart is for recyclables, and the green cart is for compostable materials such as food waste, soiled cardboard, and other compostable items. Additionally, certain disposables are color-coded red to indicate special handling. Figure 1 provides a more detailed guide on how to properly sort waste under this system.
 
 <img src="https://github.com/user-attachments/assets/6a56224d-710e-4634-a3c8-4670dc3d0a58" alt="Picture1" width="720"/>
 
@@ -29,7 +29,7 @@ In this project, we utilize OpenAI's CLIP model, which integrates both vision an
 ---
 # Architecture
 
-The model architecture in this project consists of two main components: the CLIP feature extractor and a custom classifier ([figure 2](#Figure-2)). 
+The model architecture in this project consists of two main components: the CLIP feature extractor and a custom classifier figure 2. 
 
 1. **CLIP Feature Extractor**
    We use the CLIP model `(ViT-B/32 variant)` for extracting rich image and text 
@@ -152,7 +152,7 @@ Metric	Training Accuracy	Validation Accuracy
 *Table 2. Training and validation accuracy across epochs.*
 
 Test Performance
-The model achieved an overall test accuracy of 85%. Below is a confusion matrix  ([figure 3](#Figure-3)) that provides insights into class-level performance.
+The model achieved an overall test accuracy of 85%. Below is a confusion matrix  (see figure 3) that provides insights into class-level performance.
 
 <img src="https://github.com/user-attachments/assets/88be91ab-3650-4edb-81ce-cb4f3fba9664" alt="Screenshot 2024-11-02 215055" width="720"/>
 

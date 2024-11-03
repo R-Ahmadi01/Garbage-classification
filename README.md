@@ -28,13 +28,13 @@ The model architecture consists of two main components:
 2. Custom Classifier: A fully connected neural network that takes concatenated image and text embeddings as input and classifies them into the four target categories.
 
 <img src="https://github.com/user-attachments/assets/e25fa132-8f6a-4606-a409-2a06330b93e1" alt="Model" width="720"/>
-Figure 1. Model Architecture: Fusion of CLIP embeddings and custom classifier network.
+*Figure 1. Model Architecture: Fusion of CLIP embeddings and custom classifier network.*
 
 # Dataset
-The dataset includes images classified into four groups: Blue, TTR, Green, and Black. Each image filename serves as its text description for simplicity.
+The dataset includes images classified into four groups: 'Blue', 'TTR', 'Green', and 'Black'. Each image filename serves as its text description for simplicity.
 
-- Data Augmentation: Applied random cropping, flipping, color jitter, and normalization to improve model robustness.
-- Train, Validation, and Test Splits: The dataset is divided into training, validation, and testing folders for a structured evaluation of model performance.
+- **Data Augmentation**: Applied random cropping, flipping, color jitter, and normalization to improve model robustness.
+- **Train, Validation, and Test Splits**: The dataset is divided into training, validation, and testing folders for a structured evaluation of model performance.
 
 Dataset Split	Number of Images
 Train	X

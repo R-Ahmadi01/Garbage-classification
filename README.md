@@ -104,6 +104,8 @@ Metric	Training Accuracy	Validation Accuracy
 Test Performance
 The model achieved an overall test accuracy of XX%. Below is a confusion matrix that provides insights into class-level performance.
 
+<img src="https://github.com/user-attachments/assets/88be91ab-3650-4edb-81ce-cb4f3fba9664" alt="Screenshot 2024-11-02 215055" width="720"/>
+
 
 Figure 2. Confusion Matrix on Test Data.
 

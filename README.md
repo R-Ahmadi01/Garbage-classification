@@ -15,7 +15,7 @@ This repository provides a comprehensive pipeline for classifying garbage images
 ---
 
  # Introduction
-In Canada, particularly in Calgary, waste sorting is a critical part of waste management efforts. The system relies on different color-coded carts for specific types of waste. The black cart is intended for general garbage, the blue cart is for recyclables, and the green cart is for compostable materials such as food waste, soiled cardboard, and other compostable items. Additionally, certain disposables are color-coded red to indicate special handling. Figure 1 provides a more detailed guide on how to properly sort waste under this system.
+In Canada, particularly in Calgary, waste sorting is a critical part of waste management efforts. The system relies on different color-coded carts for specific types of waste. The black cart is intended for general garbage, the blue cart is for recyclables, and the green cart is for compostable materials such as food waste, soiled cardboard, and other compostable items. Additionally, certain disposables are color-coded red to indicate special handling. **Figure 1** provides a more detailed guide on how to properly sort waste under this system.
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/6a56224d-710e-4634-a3c8-4670dc3d0a58" alt="Picture1" width="360"/>
@@ -40,9 +40,9 @@ The dataset includes images classified into four groups: `Blue`, `TTR`, `Green`,
 
 | Dataset Split | Number of Images |
 |---------------|------------------|
-| Train         | _10200_          |
-| Validation    | _1800_           |
-| Test          | _3431_           |
+| Train         |_____10200_       |
+| Validation    |_____1800_        |
+| Test          |_____3431_        |
 
 *Table 1. Dataset Distribution.*
 
@@ -56,8 +56,8 @@ To make the model more robust, several data augmentation techniques are applied 
 Random Horizontal and Vertical Flip: Randomly flips the image horizontally and vertically with a 50% probability, making the model invariant to orientation changes.
 - **Color Jitter**: Adjusts brightness, contrast, saturation, and hue with small variations, making the model less sensitive to lighting conditions.
 - **Normalization**: Applies mean and standard deviation normalization, which centers pixel values and brings them into a standard range that matches the model’s expected input format. The values used are:
-    -Mean: [0.48145466, 0.4578275, 0.40821073]
-    -Standard Deviation: [0.26862954, 0.26130258, 0.27577711]
+    - Mean: [0.48145466, 0.4578275, 0.40821073]
+    - Standard Deviation: [0.26862954, 0.26130258, 0.27577711]
   
 **Validation and Test Data Transformations**
 For validation and testing, we apply minimal transformations to keep the input consistent and avoid altering the data distribution:

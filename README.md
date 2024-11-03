@@ -21,7 +21,7 @@ In Canada, particularly in Calgary, waste sorting is a critical part of waste ma
  <img src="https://github.com/user-attachments/assets/6a56224d-710e-4634-a3c8-4670dc3d0a58" alt="Picture1" width="360"/>
 </p>
 <p align="center">
- * Figure 1. This guide illustrates Calgary's waste sorting system, including the proper disposal of garbage, recyclables, compostable materials, and other categorized items based on color-coded carts.*
+   <em>Figure 1. This guide illustrates Calgary's waste sorting system, including the proper disposal of garbage, recyclables, compostable materials, and other categorized items based on color-coded carts.</em>
 </p>
 
 
@@ -198,7 +198,7 @@ The model achieved an overall test accuracy of ***85%***. Figure 3 shows the con
  <img src="https://github.com/user-attachments/assets/88be91ab-3650-4edb-81ce-cb4f3fba9664" alt="Screenshot 2024-11-02 215055" width="720"/>
 </p>
 <p align="center">
- *Figure 3 Confusion Matrix on Test Data.*
+    <em>Figure 1. Figure 3 Confusion Matrix on Test Data.</em>
 </p>
 
 

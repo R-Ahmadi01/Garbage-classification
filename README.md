@@ -19,7 +19,7 @@ In this project, we utilize OpenAI's CLIP model, which integrates both vision an
 
 
 
-
+---
 # Architecture
 
 The model architecture in this project consists of two main components: the CLIP feature extractor and a custom classifier. 
@@ -66,6 +66,8 @@ The training process is configured with the following hyperparameters to optimiz
 
 *Figure 1. Model Architecture: Fusion of CLIP embeddings and custom classifier network.*
 
+---
+
 # Dataset
 The dataset includes images classified into four groups: `Blue`, `TTR`, `Green`, and `Black`. Each image filename serves as its text description for simplicity.
 
@@ -79,6 +81,8 @@ The dataset includes images classified into four groups: `Blue`, `TTR`, `Green`,
 | Test          | _3431_           |
 
 *Table 1. Dataset Distribution.*
+
+---
 
 # Installation
 1. **Clone the Repository**:
@@ -108,6 +112,8 @@ garbage_data/
     ├── Green/
     └── Black/
 
+---
+
 # Usage
 1. **Train the Model**: Run the training script with the following command:
    ```bash
@@ -125,6 +131,8 @@ Example:
       python evaluate.py
 
 4.**Configuration**: Adjust parameters, such as batch size, learning rates, and paths, directly in the scripts for optimal results.
+
+---
 
 # Results
 **Training and Validation Performance**
@@ -152,6 +160,7 @@ Classification Report: The detailed classification report is as follows:
 | Validation    | _Y_             |
 | Test          | _Z_             |
 
+---
 
 # Future Work
 Potential enhancements for this project include:
@@ -159,6 +168,9 @@ Potential enhancements for this project include:
 **Hyperparameter Tuning**: Experiment with different optimizers and learning rates for further performance improvements.
 **Model Extensions**: Test advanced transformer-based models like CLIP ViT-L for richer feature extraction.
 **Additional Data**: Expand the dataset with more diverse images to improve model generalization.
+
+
+---
 
 # References
 

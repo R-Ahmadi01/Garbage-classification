@@ -97,6 +97,7 @@ Metric	Training Accuracy	Validation Accuracy
 |-------|-------------------|--------------------|
 | 1st   |      0.5095       |      0.3256        |                      
 | Final |      0.1917       |      0.2464        |
+
 *Table 2. Training and validation accuracy across epochs.*
 
 Test Performance

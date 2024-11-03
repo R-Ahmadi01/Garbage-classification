@@ -59,6 +59,7 @@ Random Horizontal and Vertical Flip: Randomly flips the image horizontally and v
 - **Normalization**: Applies mean and standard deviation normalization, which centers pixel values and brings them into a standard range that matches the model’s expected input format. The values used are:
     -Mean: [0.48145466, 0.4578275, 0.40821073]
     -Standard Deviation: [0.26862954, 0.26130258, 0.27577711]
+  
 **Validation and Test Data Transformations**
 For validation and testing, we apply minimal transformations to keep the input consistent and avoid altering the data distribution:
 

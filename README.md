@@ -2,8 +2,8 @@
 This repository provides a comprehensive pipeline for classifying garbage images into specific categories by leveraging the power of CLIP (Contrastive Language–Image Pretraining) and a custom neural network classifier. The project focuses on combining both image and text features for enhanced classification accuracy across four categories: Blue, TTR, Green, and Black.
 
 
-Table of Contents
-1. Introduction
+## Table of Contents
+1. [Introduction](#introduction)
 2. Architecture
 3. Dataset
 4. Installation

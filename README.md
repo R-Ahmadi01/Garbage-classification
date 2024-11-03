@@ -14,13 +14,13 @@ This repository provides a comprehensive pipeline for classifying garbage images
 
 
 
- ### 1. Introduction
+ # Introduction
 In this project, we utilize OpenAI's CLIP model, which integrates both vision and language models, to extract rich semantic features from images and their corresponding textual descriptions. By fine-tuning a small portion of the CLIP model and training a custom classifier, we achieve a highly accurate fusion-based classification model for garbage categorization.
 
 
 
 
-## 2. Architecture
+# Architecture
 
 The model architecture consists of two main components:
 
@@ -30,7 +30,7 @@ The model architecture consists of two main components:
 <img src="https://github.com/user-attachments/assets/e25fa132-8f6a-4606-a409-2a06330b93e1" alt="Model" width="720"/>
 Figure 1. Model Architecture: Fusion of CLIP embeddings and custom classifier network.
 
-# 3.Dataset
+# Dataset
 The dataset includes images classified into four groups: Blue, TTR, Green, and Black. Each image filename serves as its text description for simplicity.
 
 - Data Augmentation: Applied random cropping, flipping, color jitter, and normalization to improve model robustness.
@@ -42,7 +42,7 @@ Validation	Y
 Test	Z
 Table 1. Dataset Distribution.
 
-# 4.Installation
+# Installation
 Clone the Repository:
 
 bash
@@ -76,7 +76,7 @@ garbage_data/
     ├── Green/
     └── Black/
 
-# 5.Usage
+# Usage
 1. Train the Model: Run the training script with the following command:
 python train.py
 The training process will automatically save the best model as best_model.pth and print loss and accuracy metrics for each epoch.
@@ -89,7 +89,7 @@ python evaluate.py
 
 4.Configuration: Adjust parameters, such as batch size, learning rates, and paths, directly in the scripts for optimal results.
 
-# 6.Results
+# Results
 Training and Validation Performance
 Metric	Training Accuracy	Validation Accuracy
 Initial	68.0%	65.5%
@@ -109,7 +109,7 @@ Blue	0.92	0.88	0.90
 TTR	0.90	0.93	0.91
 Green	0.88	0.89	0.88
 Black	0.91	0.91	0.91
-# 7.Future Work
+# Future Work
 Potential enhancements for this project include:
 
 Hyperparameter Tuning: Experiment with different optimizers and learning rates for further performance improvements.

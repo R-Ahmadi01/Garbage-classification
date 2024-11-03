@@ -4,12 +4,12 @@ This repository provides a comprehensive pipeline for classifying garbage images
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. Architecture
-3. Dataset
-4. Installation
-5. Usage
-6. Results
-7. Future Work
+2. [Architecture](#Architecture)
+3. [Dataset](#Dataset)
+4. [Installation](#Installation)
+5. [Usage](#Usage)
+6. [Results](#Results)
+7. [Future Work](#Future-Work)
 8. [References](#References)
 
 

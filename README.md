@@ -79,10 +79,10 @@ This preprocessing pipeline ensures that both image and text data are formatted 
 
 # Architecture
 
-The model architecture in this project consists of two main components: the CLIP feature extractor and a custom classifier figure 2. 
+The model architecture in this project consists of two main components: the CLIP feature extractor and a custom classifier (see **figure 2**). 
 
 1. **CLIP Feature Extractor**
-   We use the CLIP model `(ViT-B/32 variant)` for extracting rich image and text 
+   We use the CLIP model (`ViT-B/32` variant) for extracting rich image and text 
    embeddings:
    
 -   **Pre-Trained Layers**: All layers in the CLIP model are pre-trained on paired 
@@ -102,21 +102,21 @@ The model architecture in this project consists of two main components: the CLIP
         - **Layer 1**: Fully connected, 1024 units, ReLU activation, Dropout (0.5)
         - **Layer 2**: Fully connected, 512 units, ReLU activation, Dropout (0.5)
         - **Layer 3**: Fully connected, 128 units, ReLU activation
-        - **Output Layer**: Fully connected layer with 4 units (one per class).
+   - **Output Layer**: Fully connected layer with 4 units (one per class).
 
-**Dropout Regularization**: A dropout rate of 0.5 is applied in the hidden layers to reduce overfitting.
+- **Dropout Regularization**: A dropout rate of 0.5 is applied in the hidden layers to reduce overfitting.
 
 **Hyperparameters for Training**
 The training process is configured with the following hyperparameters to optimize learning and prevent overfitting:
 
 - **Optimizer**: We use the AdamW optimizer, with a two-part learning rate:
-   -**Classifier Parameters**: Learning rate of 0.001
-   -**Last Transformer Block in CLIP**: Learning rate of 1e-6 to fine-tune the last layer in the CLIP model carefully.
--**Learning Rate Scheduler**: A StepLR scheduler with `step_size=2` and `gamma=0.7`, reducing the learning rate every 2 epochs to promote stability as training progresses.
--**Loss Function**: CrossEntropyLoss, suitable for multi-class classification.
--**Batch Size**: 64 for training, validation, and testing.
--**Early Stopping**: Monitored on validation loss with a patience of 5 epochs to avoid overfitting.
--**Epochs**: Training is set for a maximum of 20 epochs, though early stopping may halt training earlier if validation performance stabilizes.
+   - **Classifier Parameters**: Learning rate of 0.001
+   - **Last Transformer Block in CLIP**: Learning rate of 1e-6 to fine-tune the last layer in the CLIP model carefully.
+- **Learning Rate Scheduler**: A StepLR scheduler with `step_size=2` and `gamma=0.7`, reducing the learning rate every 2 epochs to promote stability as training progresses.
+- **Loss Function**: CrossEntropyLoss, suitable for multi-class classification.
+- **Batch Size**: 64 for training, validation, and testing.
+- **Early Stopping**: Monitored on validation loss with a patience of 5 epochs to avoid overfitting.
+- **Epochs**: Training is set for a maximum of 20 epochs, though early stopping may halt training earlier if validation performance stabilizes.
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/e25fa132-8f6a-4606-a409-2a06330b93e1" alt="Model" width="720"/>
@@ -180,27 +180,31 @@ Example:
 
 # Results
 **Training and Validation Performance**
-Metric	Training Accuracy	Validation Accuracy
+
+This table provides an overview of the model's training and validation accuracy across epochs, with metrics recorded at both the start and final epochs. Monitoring these metrics helps assess the model's ability to generalize and avoid overfitting.
+
+*Table 2 Training and validation accuracy across epochs.*
 | Epoch |   Training Loss   |  Validation Loss   |
 |-------|-------------------|--------------------|
 | 1st   |      0.5095       |      0.3256        |                      
 | Final |      0.1917       |      0.2464        |
 
-*Table 2. Training and validation accuracy across epochs.*
 
-Test Performance
-The model achieved an overall test accuracy of 85%. Below is a confusion matrix  (see figure 3) that provides insights into class-level performance.
+**Test Performance**
+
+The model achieved an overall test accuracy of ***85%***. Figure 3 shows the confusion matrix, which highlights the performance of the model in distinguishing between the four classes. The confusion matrix offers insights into the class-level predictions, showing where the model performs well and where there may be misclassifications.
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/88be91ab-3650-4edb-81ce-cb4f3fba9664" alt="Screenshot 2024-11-02 215055" width="720"/>
 </p>
-
 <p align="center">
- *Figure 3. Confusion Matrix on Test Data.*
+ *Figure 3 Confusion Matrix on Test Data.*
 </p>
 
-Classification Report: The detailed classification report is as follows:
 
+The **table 3** presents the model's performance metrics for each class, including **precision**, **recall**, and **F1-score**. These metrics offer insights into how accurately the model identifies each class. Higher values indicate stronger classification accuracy, with the F1-score providing a balanced measure of precision and recall.
+
+*Table 3 Model Performance Metrics Across Classes.*
 | Class | Precision |   Recall  |  F1-Score    |
 |-------|-----------|-----------|--------------|
 | Blue  |    0.80   |    0.91   |    0.85      |

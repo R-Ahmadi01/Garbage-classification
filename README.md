@@ -154,13 +154,12 @@ Figure 2. Confusion Matrix on Test Data.
 
 Classification Report: The detailed classification report is as follows:
 
-| Epoch |   Training Loss   |  Validation Loss   |
-| Class | Precision |   Recall   |  F1-Score    |
-|-------|-----------||-----------|--------------|
-| Blue  |    0.80   ||    0.91   |    0.85      |
-| TTR   |    0.91   ||    0.76   |    0.83      |
-| Green |    0.92   ||    0.94   |    0.93      |
-| Black |    0.78   ||    0.75   |    0.76      |
+| Class | Precision |   Recall  |  F1-Score    |
+|-------|-----------|-----------|--------------|
+| Blue  |    0.80   |    0.91   |    0.85      |
+| TTR   |    0.91   |    0.76   |    0.83      |
+| Green |    0.92   |    0.94   |    0.93      |
+| Black |    0.78   |    0.75   |    0.76      |
 
 ---
 

@@ -28,10 +28,10 @@ The model architecture in this project consists of two main components: the CLIP
    We use the CLIP model `(ViT-B/32 variant)` for extracting rich image and text 
    embeddings:
    
--   ●**Pre-Trained Layers**: All layers in the CLIP model are pre-trained on paired 
+-   **Pre-Trained Layers**: All layers in the CLIP model are pre-trained on paired 
       image and text data. For efficient transfer learning, all layers are frozen 
       except for the last transformer block.
--   ●**Embedding Dimensions**: Both image and text embeddings are 512-dimensional, and 
+-   **Embedding Dimensions**: Both image and text embeddings are 512-dimensional, and 
       these embeddings are concatenated to form a 1024-dimensional input to the 
       classifier.
 2.**Custom Classifier**
@@ -39,27 +39,27 @@ The model architecture in this project consists of two main components: the CLIP
    and text embeddings to classify the input into one of four categories: Blue, TTR, 
    Green, or Black.
 
-**Layer Structure**:
-**Input Layer**: Takes the concatenated 1024-dimensional vector (512 from image + 512 from text).
-**Hidden Layers**: 
-** Layer 1: Fully connected, 1024 units, ReLU activation, Dropout (0.5)
-** Layer 2: Fully connected, 512 units, ReLU activation, Dropout (0.5)
-** Layer 3: Fully connected, 128 units, ReLU activation
-** Output Layer: Fully connected layer with 4 units (one per class).
+- **Layer Structure**:
+   - **Input Layer**: Takes the concatenated 1024-dimensional vector (512 from image + 512 from text).
+   - **Hidden Layers**: 
+        - ** Layer 1: Fully connected, 1024 units, ReLU activation, Dropout (0.5)
+        - ** Layer 2: Fully connected, 512 units, ReLU activation, Dropout (0.5)
+        - ** Layer 3: Fully connected, 128 units, ReLU activation
+        - ** Output Layer: Fully connected layer with 4 units (one per class).
 
-Dropout Regularization: A dropout rate of 0.5 is applied in the hidden layers to reduce overfitting.
+**Dropout Regularization**: A dropout rate of 0.5 is applied in the hidden layers to reduce overfitting.
 
 **Hyperparameters for Training**
 The training process is configured with the following hyperparameters to optimize learning and prevent overfitting:
 
-Optimizer: We use the AdamW optimizer, with a two-part learning rate:
-Classifier Parameters: Learning rate of 0.001
-Last Transformer Block in CLIP: Learning rate of 1e-6 to fine-tune the last layer in the CLIP model carefully.
-Learning Rate Scheduler: A StepLR scheduler with step_size=2 and gamma=0.7, reducing the learning rate every 2 epochs to promote stability as training progresses.
-Loss Function: CrossEntropyLoss, suitable for multi-class classification.
-Batch Size: 64 for training, validation, and testing.
-Early Stopping: Monitored on validation loss with a patience of 5 epochs to avoid overfitting.
-Epochs: Training is set for a maximum of 20 epochs, though early stopping may halt training earlier if validation performance stabilizes.
+- **Optimizer**: We use the AdamW optimizer, with a two-part learning rate:
+   -**Classifier Parameters**: Learning rate of 0.001
+   -**Last Transformer Block in CLIP**: Learning rate of 1e-6 to fine-tune the last layer in the CLIP model carefully.
+-**Learning Rate Scheduler**: A StepLR scheduler with `step_size=2` and `gamma=0.7`, reducing the learning rate every 2 epochs to promote stability as training progresses.
+-**Loss Function**: CrossEntropyLoss, suitable for multi-class classification.
+-**Batch Size**: 64 for training, validation, and testing.
+-**Early Stopping**: Monitored on validation loss with a patience of 5 epochs to avoid overfitting.
+-**Epochs**: Training is set for a maximum of 20 epochs, though early stopping may halt training earlier if validation performance stabilizes.
 
 
 <img src="https://github.com/user-attachments/assets/e25fa132-8f6a-4606-a409-2a06330b93e1" alt="Model" width="720"/>

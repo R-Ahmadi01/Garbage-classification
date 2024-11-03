@@ -3,7 +3,7 @@ This repository provides a comprehensive pipeline for classifying garbage images
 
 
 Table of Contents
-Introduction
+1. Introduction
 Architecture
 Dataset
 Installation

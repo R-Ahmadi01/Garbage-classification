@@ -1,5 +1,5 @@
 # Garbage-classification
-This repository ([GarbageClassifierModel](https://github.com/R-Ahmadi01/Garbage-classification/blob/main/CLIP.ipynb)) provides a comprehensive pipeline for classifying garbage images into specific categories by leveraging the power of CLIP (Contrastive Language–Image Pretraining) and a custom neural network classifier. The project focuses on combining both image and text features for enhanced classification accuracy across four categories: Blue, TTR, Green, and Black.
+This repository ([Garbage Classifier Model](https://github.com/R-Ahmadi01/Garbage-classification/blob/main/CLIP.ipynb)) provides a comprehensive pipeline for classifying garbage images into specific categories by leveraging the power of CLIP (Contrastive Language–Image Pretraining) and a custom neural network classifier. The project focuses on combining both image and text features for enhanced classification accuracy across four categories: Blue, TTR, Green, and Black.
 
 
 ## Table of Contents

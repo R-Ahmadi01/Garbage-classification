@@ -7,10 +7,8 @@ This repository ([Garbage Classifier Model](https://github.com/R-Ahmadi01/Garbag
 2. [Dataset](#dataset)
 3. [Data Preprocessing](#data-preprocessing)
 4. [Architecture](#Architecture)
-6. [Installation](#Installation)
-7. [Usage](#Usage)
-8. [Results](#Results)
-9. [Future Work](#Future-Work)
+5. [Results](#Results)
+6. [Future Work](#Future-Work)
 
 ---
 
@@ -125,56 +123,6 @@ The training process is configured with the following hyperparameters to optimiz
   <em>Figure 2. Model Architecture: Fusion of CLIP embeddings and custom classifier network.</em>
 </p>
 
-
----
-
-# Installation
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/garbage-classification-clip.git
-   cd garbage-classification-clip
-2. **Install Required Libraries**: Ensure `torch`, `torchvision`, `clip`, `numpy`, `PIL`, `matplotlib`, and `seaborn` are installed.
-   ```bash
-   pip install -r requirements.txt
-3.**Set Up Data Directory**:
-Place your dataset in the following structure:
-
-garbage_data/
-├── CVPR_2024_dataset_Train/
-│   ├── Blue/
-│   ├── TTR/
-│   ├── Green/
-│   └── Black/
-├── CVPR_2024_dataset_Val/
-│   ├── Blue/
-│   ├── TTR/
-│   ├── Green/
-│   └── Black/
-└── CVPR_2024_dataset_Test/
-    ├── Blue/
-    ├── TTR/
-    ├── Green/
-    └── Black/
-
----
-
-# Usage
-1. **Train the Model**: Run the training script with the following command:
-   ```bash
-   python train.py
-
-The training process will automatically save the best model as `best_model.pth` and print loss and accuracy metrics for each epoch.
-
-2. **Test the Model**: Once training is complete, evaluate the model on the test dataset:
-      ```bash
-      python test.py
-
-3.**Visualize Results**: Use the provided script to generate a confusion matrix and classification report. 
-Example: 
-      ```bash
-      python evaluate.py
-
-4.**Configuration**: Adjust parameters, such as batch size, learning rates, and paths, directly in the scripts for optimal results.
 
 ---
 

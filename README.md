@@ -118,7 +118,7 @@ The training process is configured with the following hyperparameters to optimiz
 - **Epochs**: Training is set for a maximum of 20 epochs, though early stopping may halt training earlier if validation performance stabilizes.
 
 <p align="center">
- <img src="https://github.com/user-attachments/assets/e25fa132-8f6a-4606-a409-2a06330b93e1" alt="Model" width="720"/>
+ <img src="https://github.com/R-Ahmadi01/Garbage-classification/blob/main/Model%20Structure.png" alt="Model Structure" width="720"/>
 </p>
 <p align="center">
   <em>Figure 2. Model Architecture: Fusion of CLIP embeddings and custom classifier network.</em>

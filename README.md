@@ -111,7 +111,7 @@ The training process is configured with the following hyperparameters to optimiz
 - **Optimizer**: We use the AdamW optimizer, with a two-part learning rate:
    - **Classifier Parameters**: Learning rate of 0.001
    - **Last Transformer Block in CLIP**: Learning rate of 1e-6 to fine-tune the last layer in the CLIP model carefully.
-- **Learning Rate Scheduler**: A StepLR scheduler with `step_size=2` and `gamma=0.7`, reducing the learning rate every 2 epochs to promote stability as training progresses.
+- **Learning Rate Scheduler**: A StepLR scheduler with `step_size=2` and `gamma=0.5`, reducing the learning rate every 2 epochs to promote stability as training progresses.
 - **Loss Function**: CrossEntropyLoss, suitable for multi-class classification.
 - **Batch Size**: 64 for training, validation, and testing.
 - **Early Stopping**: Monitored on validation loss with a patience of 5 epochs to avoid overfitting.

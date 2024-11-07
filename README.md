@@ -95,11 +95,12 @@ The model architecture in this project consists of two main components: the CLIP
    Green, or Black.
 
 - **Layer Structure**:
-   - **Input Layer**: Takes the concatenated 1024-dimensional vector (512 from image + 512 from text).
+   - **Batch Normalization**: Applied separately to the 512-dimensional image and text feature vectors before they are concatenated. This normalization step helps stabilize training and improves convergence.
+   - **Input Layer**: Takes a concatenated 1024-dimensional vector (512 from batch-normalized image features + 512 from batch-normalized text features).
    - **Hidden Layers**: 
         - **Layer 1**: Fully connected, 1024 units, ReLU activation, Dropout (0.5)
         - **Layer 2**: Fully connected, 512 units, ReLU activation, Dropout (0.5)
-        - **Layer 3**: Fully connected, 128 units, ReLU activation
+        - **Layer 3**: Fully connected, 256 units, ReLU activation
    - **Output Layer**: Fully connected layer with 4 units (one per class).
 
 - **Dropout Regularization**: A dropout rate of 0.5 is applied in the hidden layers to reduce overfitting.
@@ -134,16 +135,16 @@ This table provides an overview of the model's training and validation accuracy 
 *Table 2 Training and validation accuracy across epochs.*
 | Epoch |   Training Loss   |  Validation Loss   |
 |-------|-------------------|--------------------|
-| 1st   |      0.5095       |      0.3256        |   
-| 2nd   |      0.3204       |      0.2942        |   
-| 3rd   |      0.2557       |      0.2595        |   
-| 5th   |      0.2015       |      0.2536        |   
-| Final |      0.1917       |      0.2464        |
+| 1st   |      0.4355       |      0.2836        |   
+| 2nd   |      0.2735       |      0.2810        |   
+| 3rd   |      0.2121       |      0.2634        |   
+| Final |      0.1740       |      0.2521        |   
+
 
 
 **Test Performance**
 
-The model achieved an overall test accuracy of ***85%***. Figure 3 shows the confusion matrix, which highlights the performance of the model in distinguishing between the four classes. The confusion matrix offers insights into the class-level predictions, showing where the model performs well and where there may be misclassifications.
+The model achieved an overall test accuracy of ***84.6%***. Figure 3 shows the confusion matrix, which highlights the performance of the model in distinguishing between the four classes. The confusion matrix offers insights into the class-level predictions, showing where the model performs well and where there may be misclassifications.
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/88be91ab-3650-4edb-81ce-cb4f3fba9664" alt="Screenshot 2024-11-02 215055" width="720"/>
@@ -159,9 +160,9 @@ The **table 3** presents the model's performance metrics for each class, includi
 | Class | Precision |   Recall  |  F1-Score    |
 |-------|-----------|-----------|--------------|
 | Blue  |    0.80   |    0.91   |    0.85      |
-| TTR   |    0.91   |    0.76   |    0.83      |
+| TTR   |    0.90   |    0.77   |    0.83      |
 | Green |    0.92   |    0.94   |    0.93      |
-| Black |    0.78   |    0.75   |    0.76      |
+| Black |    0.78   |    0.73   |    0.76      |
 
 ---
 

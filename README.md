@@ -151,7 +151,7 @@ The model achieved an overall test accuracy of ***84.6%***. Figure 3 shows the c
  <img src="https://github.com/user-attachments/assets/91925bd8-bd83-4789-abc2-c77bf461f629" alt="Confusion Matrix" width="720"/>
 </p>
 <p align="center">
-    <em>Figure 1. Figure 3 Confusion Matrix on Test Data.</em>
+    <em> Figure 3 Confusion Matrix on Test Data.</em>
 </p>
 
 

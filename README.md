@@ -146,8 +146,9 @@ This table provides an overview of the model's training and validation accuracy 
 
 The model achieved an overall test accuracy of ***84.6%***. Figure 3 shows the confusion matrix, which highlights the performance of the model in distinguishing between the four classes. The confusion matrix offers insights into the class-level predictions, showing where the model performs well and where there may be misclassifications.
 
+
 <p align="center">
- <img src="https://github.com/user-attachments/assets/88be91ab-3650-4edb-81ce-cb4f3fba9664" alt="Screenshot 2024-11-02 215055" width="720"/>
+ <img src="https://github.com/user-attachments/assets/91925bd8-bd83-4789-abc2-c77bf461f629" alt="Confusion Matrix" width="720"/>
 </p>
 <p align="center">
     <em>Figure 1. Figure 3 Confusion Matrix on Test Data.</em>

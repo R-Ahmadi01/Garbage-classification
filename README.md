@@ -86,10 +86,9 @@ The model architecture in this project consists of two main components: the CLIP
 -   **Pre-Trained Layers**: All layers in the CLIP model are pre-trained on paired 
       image and text data. For efficient transfer learning, all layers are frozen 
       except for the last transformer block.
--   **Embedding Dimensions**: Both image and text embeddings are 512-dimensional, and 
-      these embeddings are concatenated to form a 1024-dimensional input to the 
-      classifier.
-2.**Custom Classifier**
+-   **Embedding Dimensions**: Both image and text embeddings are 512-dimensional.
+
+  2. **Custom Classifier**
    The classifier is a fully connected neural network that processes the fused image 
    and text embeddings to classify the input into one of four categories: Blue, TTR, 
    Green, or Black.

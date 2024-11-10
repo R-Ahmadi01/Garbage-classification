@@ -129,7 +129,8 @@ The training process is configured with the following hyperparameters to optimiz
 # Results
 **Training and Validation Performance**
 
-This table provides an overview of the model's training and validation accuracy across epochs, with metrics recorded at both the start and final epochs. Monitoring these metrics helps assess the model's ability to generalize and avoid overfitting.
+From the training and validation loss values across epochs, we observe a consistent decrease in both metrics (**table 2**). This indicates that the model is effectively learning from the data without significant overfitting by the final epoch. The training loss dropped from 0.4355 to 0.1740, while the validation loss decreased from 0.2836 to 0.2521. The small difference between training and validation loss in the final epoch suggests that the model generalizes well on unseen data.
+This performance trend is a positive sign of model robustness, as it indicates that the model is not merely memorizing the training data but is likely capable of accurately classifying garbage types on new data as well.
 
 *Table 2 Training and validation accuracy across epochs.*
 | Epoch |   Training Loss   |  Validation Loss   |
@@ -141,9 +142,9 @@ This table provides an overview of the model's training and validation accuracy 
 
 
 
-**Test Performance**
+**Test Performance and Confusion Matrix**
 
-The model achieved an overall test accuracy of ***84.6%***. Figure 3 shows the confusion matrix, which highlights the performance of the model in distinguishing between the four classes. The confusion matrix offers insights into the class-level predictions, showing where the model performs well and where there may be misclassifications.
+The model achieved an overall test accuracy of ***84.6%***. Figure 3 shows the confusion matrix, which provides an in-depth look at the model's performance across the four classes. The matrix shows that the model achieves high accuracy for the "Blue" and "Green" classes, with 982 and 755 correct predictions, respectively. However, there are some misclassifications, particularly with "Black" and "TTR" classes, which seem more prone to being confused with others.
 
 
 <p align="center">
@@ -153,8 +154,13 @@ The model achieved an overall test accuracy of ***84.6%***. Figure 3 shows the c
     <em> Figure 3 Confusion Matrix on Test Data.</em>
 </p>
 
-
 The **table 3** presents the model's performance metrics for each class, including **precision**, **recall**, and **F1-score**. These metrics offer insights into how accurately the model identifies each class. Higher values indicate stronger classification accuracy, with the F1-score providing a balanced measure of precision and recall.
+
+1.	**Blue Class**: High recall of 0.91, indicating that most "Blue" items were correctly identified. However, the lower precision of 0.80 suggests that some predictions were incorrectly classified as "Blue" when they actually belonged to other classes.
+2.	**TTR Class**: Lower recall (0.77) compared to other classes, indicating that a portion of "TTR" items was missed. This could be due to overlapping features between "TTR" and other classes, particularly "Blue" and "Black," as shown in the matrix.
+3.	**Green Class**: High recall (0.94) and precision (0.92), leading to a strong F1-score of 0.93. This indicates that the model excels at identifying "Green" items, likely due to distinctive features that make them easier to classify.
+4.	**Black Class**: This class has the lowest recall (0.73) and precision (0.78). A substantial number of "Black" items are misclassified, suggesting that this class may share characteristics with other classes, making it challenging for the model to distinguish. Further analysis might reveal if specific features or additional preprocessing could improve classification for "Black" items.
+
 
 *Table 3 Model Performance Metrics Across Classes.*
 | Class | Precision |   Recall  |  F1-Score    |
@@ -163,6 +169,12 @@ The **table 3** presents the model's performance metrics for each class, includi
 | TTR   |    0.90   |    0.77   |    0.83      |
 | Green |    0.92   |    0.94   |    0.93      |
 | Black |    0.78   |    0.73   |    0.76      |
+
+
+To recapitulate, the class-wise precision, recall, and F1 scores highlight that the model is particularly strong in identifying "Green" items, as indicated by the highest F1-score of 0.93. In contrast, the "Black" class has the lowest F1-score (0.76), pointing to a need for further improvement. The model's overall test accuracy of 84.6% demonstrates a solid performance for a multi-class classification task in a real-world scenario, where variability in lighting, angle, and background can add complexity. However, addressing the misclassifications in specific classes, particularly "Black" and "TTR," could push the accuracy even higher and reduce misclassification costs in practical applications.
+
+
+
 
 ---
 
